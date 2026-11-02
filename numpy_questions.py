@@ -37,13 +37,12 @@ def max_index(X):
         If the input is not a numpy array or
         if the shape is not 2D.
     """
-
     if not isinstance(X, np.ndarray) or X.ndim != 2:
         raise ValueError("Input must be a 2D numpy array")
-    
+
     if X.size == 0:
         raise ValueError("Input array must not be empty")
-    
+
     max_i = 0
     max_j = 0
     max = X[0, 0]
@@ -80,7 +79,7 @@ def wallis_product(n_terms):
 
     if not isinstance(n_terms, (int, np.integer)):
         raise TypeError("n_terms must be an integer.")
-    
+
     if n_terms < 0:
         raise ValueError("n_terms must be non-negative.")
 
